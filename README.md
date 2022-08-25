@@ -27,7 +27,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Repository Traffic
-        uses: wumphlett/repostats@v0.1.6
+        uses: wumphlett/repostats@v1.0.0
         with:
           format_readme: true
         env:
@@ -64,6 +64,6 @@ daily.
     Repository Views
     3.00  ┼
 
-    Chart last updated - Thu Aug 25 07:02:32 2022 UTC
+    Chart last updated - Thu Aug 25 07:07:16 2022 UTC
     
 ```
