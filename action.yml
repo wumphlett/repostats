@@ -33,11 +33,11 @@ runs:
     - run: poetry run data
       shell: bash
       env:
-        TRAFFIC_ACTION_TOKEN: ${{ inputs.traffic_dir }}
+        TRAFFIC_DIR: ${{ inputs.traffic_dir }}
     - run: poetry run readme
       shell: bash
       env:
-        TRAFFIC_ACTION_TOKEN: ${{ inputs.traffic_dir }}
+        TRAFFIC_DIR: ${{ inputs.traffic_dir }}
       if: ${{ inputs.format_readme }}
 
     - uses: EndBug/add-and-commit@v9.1.0
