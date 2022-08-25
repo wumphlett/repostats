@@ -21,11 +21,12 @@ def get_kpi(path: Path, kpi: str):
         old_counts = read_csv(path, index_col="date", parse_dates=["date"]).to_dict(orient="index")
         counts.update(old_counts)
 
-    start_date, end_date = min(counts.keys()), max(counts.keys())
-    for i in range((end_date - start_date).days + 1):
-        day = start_date + timedelta(days=i)
-        if day not in counts:
-            counts[day] = {f"total_{kpi}": 0, f"unique_{kpi}": 0}
+    if counts:
+        start_date, end_date = min(counts.keys()), max(counts.keys())
+        for i in range((end_date - start_date).days + 1):
+            day = start_date + timedelta(days=i)
+            if day not in counts:
+                counts[day] = {f"total_{kpi}": 0, f"unique_{kpi}": 0}
 
     dataframe = DataFrame.from_dict(data=counts, orient="index", columns=[f"total_{kpi}", f"unique_{kpi}"])
     dataframe.index.name = "date"
@@ -81,11 +82,13 @@ def main():
     views_frame = get_views(workplace_path / "views.csv")
     clone_frame = get_clones(workplace_path / "clones.csv")
 
-    with open(workplace_path / "views_chart.txt", "w", encoding="utf-8") as views_chart:
-        views_chart.write(get_views_plot(views_frame))
+    if not views_frame.empty:
+        with open(workplace_path / "views_chart.txt", "w", encoding="utf-8") as views_chart:
+            views_chart.write(get_views_plot(views_frame))
 
-    with open(workplace_path / "clones_chart.txt", "w", encoding="utf-8") as clones_chart:
-        clones_chart.write(get_clones_plot(clone_frame))
+    if not clone_frame.empty:
+        with open(workplace_path / "clones_chart.txt", "w", encoding="utf-8") as clones_chart:
+            clones_chart.write(get_clones_plot(clone_frame))
 
 
 if __name__ == "__main__":

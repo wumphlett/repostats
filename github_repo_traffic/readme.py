@@ -17,11 +17,17 @@ def main():
     with open(readme_path, encoding="utf-8") as readme_template:
         readme_template = readme_template.read()
 
-    with open(workplace_path / "views_chart.txt", encoding="utf-8") as views_chart:
-        views_chart = views_chart.read()
+    if (workplace_path / "views_chart.txt").exists():
+        with open(workplace_path / "views_chart.txt", encoding="utf-8") as views_chart:
+            views_chart = views_chart.read()
+    else:
+        views_chart = ""
 
-    with open(workplace_path / "clones_chart.txt", encoding="utf-8") as clones_chart:
-        clones_chart = clones_chart.read()
+    if (workplace_path / "clones_chart.txt").exists():
+        with open(workplace_path / "clones_chart.txt", encoding="utf-8") as clones_chart:
+            clones_chart = clones_chart.read()
+    else:
+        clones_chart = ""
 
     readme = readme_template.format(VIEWS_CHART=views_chart, CLONES_CHART=clones_chart)
 
