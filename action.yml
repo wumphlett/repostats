@@ -24,7 +24,11 @@ runs:
     - uses: abatilo/actions-poetry@v2.1.6
       with:
         poetry-version: "1.1.15"
-      run: poetry run data
+    - run: poetry run data
+      shell: bash
+    - run: poetry run readme
+      shell: bash
+      if: ${{ inputs.format_readme }}
 
     - uses: EndBug/add-and-commit@v9.1.0
       with:
