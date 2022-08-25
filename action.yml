@@ -1,0 +1,35 @@
+name: "Repository Traffic"
+description: "Aggregates repository traffic over multiple days"
+
+inputs:
+  format_readme:
+    description: "Flag to allow formatting of a template readme with traffic data"
+    required: false
+    default: false
+    type: boolean
+  commit_msg:
+    description: "The commit message to use when updating changes to your traffic data"
+    required: false
+    default: "Updating repository traffic"
+
+runs:
+  using: composite
+  steps:
+    - uses: actions/checkout@v2
+
+    - uses: actions/setup-python@v2
+      with:
+        python-version: "3.10"
+
+    - uses: abatilo/actions-poetry@v2.1.6
+      with:
+        poetry-version: "1.1.15"
+      env:
+        TRAFFIC_ACTION_TOKEN: ${{ secrets.TRAFFIC_ACTION_TOKEN }}
+      - run: poetry run data
+      - run: poetry run readme
+        if: ${{ inputs.format_readme }}
+
+    - uses: EndBug/add-and-commit@v9.1.0
+      with:
+        message: ${{ inputs.commit_msg }}
