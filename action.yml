@@ -28,6 +28,8 @@ runs:
       shell: bash
     - run: poetry run data
       shell: bash
+      env:
+        TRAFFIC_ACTION_TOKEN: ${{ secrets.TRAFFIC_ACTION_TOKEN }}
     - run: poetry run readme
       shell: bash
       if: ${{ inputs.format_readme }}
