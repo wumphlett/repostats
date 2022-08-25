@@ -28,8 +28,6 @@ jobs:
     steps:
       - name: Repository Traffic
         uses: wumphlett/repostats@v1.1.0
-        with:
-          format_readme: true
         env:
           TRAFFIC_ACTION_TOKEN: ${ secrets.TRAFFIC_ACTION_TOKEN }
 ```
@@ -64,6 +62,6 @@ daily.
     Repository Views
     3.00  ┼
 
-    Chart last updated - Thu Aug 25 09:07:44 2022 UTC
+    Chart last updated - Thu Aug 25 09:27:01 2022 UTC
     
 ```
