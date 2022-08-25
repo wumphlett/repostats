@@ -16,7 +16,7 @@ jobs:
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
       - name: Repository Traffic
-        uses: wumphlett/repostats@v0.1.5
+        uses: wumphlett/repostats@v0.1.6
         with:
           format_readme: true
         env:
