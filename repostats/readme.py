@@ -6,7 +6,7 @@ from dotenv import load_dotenv
 
 def main():
     load_dotenv()
-    workplace_path = Path(os.getenv("GITHUB_WORKSPACE")).resolve() / ".traffic"
+    workplace_path = Path(os.getenv("GITHUB_WORKSPACE")).resolve() / os.getenv("TRAFFIC_DIR")
     github_path = Path(os.getenv("GITHUB_WORKSPACE")).resolve() / ".github"
 
     readme_path = next((path for path in github_path.iterdir() if path.stem.startswith("TEMPLATE_README")), None)

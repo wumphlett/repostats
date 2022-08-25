@@ -74,7 +74,7 @@ def get_clones_plot(data: DataFrame):
 
 def main():
     load_dotenv()
-    workplace_path = Path(os.getenv("GITHUB_WORKSPACE")).resolve() / ".traffic"
+    workplace_path = Path(os.getenv("GITHUB_WORKSPACE")).resolve() / os.getenv("TRAFFIC_DIR")
 
     workplace_path.mkdir(exist_ok=True)
 
