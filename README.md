@@ -7,7 +7,7 @@ repository. In addition, ascii charts are generated and can be automatically ins
 # Usage
 ## Permissions
 1. Create a personal access token (PAT) with repo permissions
-2. Store it in your repository secrets with the key TRAFFIC_ACTION_TOKEN
+2. Store it in your repository secrets with the key `TRAFFIC_ACTION_TOKEN`
 
 ## Workflow
 Create a `workflow.yml` file in your `.github/workflows` directory. An example is provided.
@@ -64,6 +64,6 @@ daily.
     Repository Views
     3.00  ┼
 
-    Chart last updated - Thu Aug 25 08:10:42 2022 UTC
+    Chart last updated - Thu Aug 25 08:13:00 2022 UTC
     
 ```
