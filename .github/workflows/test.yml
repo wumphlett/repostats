@@ -19,3 +19,5 @@ jobs:
         uses: wumphlett/repostats@v0.1.4
         with:
           format_readme: true
+        env:
+          TRAFFIC_ACTION_TOKEN: ${{ secrets.TRAFFIC_ACTION_TOKEN }}
