@@ -1,5 +1,8 @@
-name: "Repository Traffic"
-description: "Aggregates repository traffic over multiple days"
+name: "Save Repository Traffic with README Formatting"
+description: "Stores repository traffic past two weeks and adds traffic to repository README"
+branding:
+  icon: "archive"
+  color: "gray-dark"
 
 inputs:
   format_readme:
