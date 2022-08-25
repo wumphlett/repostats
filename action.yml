@@ -31,13 +31,13 @@ runs:
     - uses: abatilo/actions-poetry@v2.1.6
       with:
         poetry-version: "1.1.15"
-    - run: poetry install
+    - run: pip install github-repo-traffic
       shell: bash
-    - run: poetry run data
+    - run: data
       shell: bash
       env:
         TRAFFIC_DIR: ${{ inputs.traffic_dir }}
-    - run: poetry run readme
+    - run: readme
       shell: bash
       env:
         TRAFFIC_DIR: ${{ inputs.traffic_dir }}
