@@ -24,11 +24,7 @@ runs:
     - uses: abatilo/actions-poetry@v2.1.6
       with:
         poetry-version: "1.1.15"
-      env:
-        TRAFFIC_ACTION_TOKEN: ${{ secrets.TRAFFIC_ACTION_TOKEN }}
-      - run: poetry run data
-      - run: poetry run readme
-        if: ${{ inputs.format_readme }}
+      run: poetry run data
 
     - uses: EndBug/add-and-commit@v9.1.0
       with:
