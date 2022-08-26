@@ -15,11 +15,8 @@ Create a `workflow.yml` file in your `.github/workflows` directory. An example i
 ```yaml
 name: Repository Traffic
 on:
-  push:
-    branches:
-      - main
   schedule:
-    - cron: "55 23 * * *"
+    - cron: "55 23 * * 1"
   workflow_dispatch:
 
 jobs:
@@ -31,10 +28,10 @@ jobs:
         env:
           TRAFFIC_ACTION_TOKEN: ${ secrets.TRAFFIC_ACTION_TOKEN }
 ```
-The env directive with the `TRAFFIC_ACTION_TOKEN` is required. Any variables defined in with are optional.
+The `env` directive with the `TRAFFIC_ACTION_TOKEN` is required. Any variables defined in `with` are optional.
 
 ## Configuration
-Three values can be configured in the with directive of the action.
+Three values can be configured in the `with` directive of the action.
 ```
 format_readme (true/false) - control whether the action will format a template readme with traffic data (see below)
   default: false
@@ -57,11 +54,26 @@ daily.
 
 ```
 
-    Total Views per Day from 2022-08-25 to 2022-08-25
+    Total Views per Day from 2022-08-25 to 2022-08-26
 
     Repository Views
-    3.00  ┼
+    3.00  ┼╮
+    2.93  ┤│
+    2.87  ┤│
+    2.80  ┤│
+    2.73  ┤│
+    2.67  ┤│
+    2.60  ┤│
+    2.53  ┤│
+    2.47  ┤│
+    2.40  ┤│
+    2.33  ┤│
+    2.27  ┤│
+    2.20  ┤│
+    2.13  ┤│
+    2.07  ┤│
+    2.00  ┤╰
 
-    Chart last updated - Thu Aug 25 23:58:43 2022 UTC
+    Chart last updated - Fri Aug 26 15:30:17 2022 UTC
     
 ```
