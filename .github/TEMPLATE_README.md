@@ -15,11 +15,8 @@ Create a `workflow.yml` file in your `.github/workflows` directory. An example i
 ```yaml
 name: Repository Traffic
 on:
-  push:
-    branches:
-      - main
   schedule:
-    - cron: "55 23 * * *"
+    - cron: "55 23 * * 1"
   workflow_dispatch:
 
 jobs:
@@ -31,10 +28,10 @@ jobs:
         env:
           TRAFFIC_ACTION_TOKEN: ${{ secrets.TRAFFIC_ACTION_TOKEN }}
 ```
-The env directive with the `TRAFFIC_ACTION_TOKEN` is required. Any variables defined in with are optional.
+The `env` directive with the `TRAFFIC_ACTION_TOKEN` is required. Any variables defined in `with` are optional.
 
 ## Configuration
-Three values can be configured in the with directive of the action.
+Three values can be configured in the `with` directive of the action.
 ```
 format_readme (true/false) - control whether the action will format a template readme with traffic data (see below)
   default: false
