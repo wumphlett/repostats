@@ -24,7 +24,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Repository Traffic
-        uses: wumphlett/repostats@v1.1.0
+        uses: wumphlett/repostats@v2.0.0
         env:
           TRAFFIC_ACTION_TOKEN: ${ secrets.TRAFFIC_ACTION_TOKEN }
 ```
@@ -52,28 +52,42 @@ daily.
 4. Trigger the action to format your readme which will automatically commit the changes
    1. Note, all changes that you want to make to your readme must now be made to the template instead of the readme in the root of the repo
 
+## Running `github-repo-traffic` locally
+You can use the package responsible for metric collection/aggregation locally instead of in a github action.
+
+1. `pip install github-repo-stats`
+2. Set the environment variables in `.env.example`
+   1. TRAFFIC_ACTION_TOKEN - a personal access token with repo permissions
+   2. GITHUB_REPOSITORY - the repo you're trying to collect metrics for (e.g. wumphlett/repostats)
+   3. GITHUB_WORKSPACE - your root directory (can be anything if you're not using readme formatting, else root of a repo)
+   4. TRAFFIC_DIR - the directory to store collected metrics (default `.traffic`)
+3. Invoke the commands
+   1. `repo-data` - collects and aggregates metric data (make sure to run at least every two weeks for complete data)
+   2. `repo-readme` - formats a template readme with a views/clones chart
+
 ```
 
     Total Views per Day from 2022-08-25 to 2022-08-26
 
     Repository Views
-    3.00  ┼╮
-    2.93  ┤│
-    2.87  ┤│
-    2.80  ┤│
-    2.73  ┤│
-    2.67  ┤│
-    2.60  ┤│
-    2.53  ┤│
-    2.47  ┤│
-    2.40  ┤│
-    2.33  ┤│
-    2.27  ┤│
-    2.20  ┤│
-    2.13  ┤│
-    2.07  ┤│
-    2.00  ┤╰
+  322.00  ┤
+  303.19  ┼╮
+  284.38  ┤│
+  265.56  ┤│
+  246.75  ┤│
+  227.94  ┤│
+  209.12  ┤│
+  190.31  ┤│
+  171.50  ┤│
+  152.69  ┤│
+  133.88  ┤│
+  115.06  ┤│
+   96.25  ┤│
+   77.44  ┤│
+   58.62  ┤│
+   39.81  ┤│
+   21.00  ┤╰
 
-    Chart last updated - Sat Aug 27 20:12:40 2022 UTC
+    Chart last updated - Sat Aug 27 20:35:23 2022 UTC
     
 ```
