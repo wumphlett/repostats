@@ -20,5 +20,5 @@
     9.00  ┤ ╰
     4.00  ┤
 
-    Chart last updated - Sat Aug 27 20:35:23 2022 UTC
+    Chart last updated - Sat Aug 27 20:40:45 2022 UTC
     

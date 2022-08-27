@@ -24,7 +24,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Repository Traffic
-        uses: wumphlett/repostats@v2.0.0
+        uses: wumphlett/repostats@v2.0.1
         env:
           TRAFFIC_ACTION_TOKEN: ${ secrets.TRAFFIC_ACTION_TOKEN }
 ```
@@ -88,6 +88,6 @@ You can use the package responsible for metric collection/aggregation locally in
    39.81  ┤│
    21.00  ┤╰
 
-    Chart last updated - Sat Aug 27 20:35:23 2022 UTC
+    Chart last updated - Sat Aug 27 20:40:45 2022 UTC
     
 ```
