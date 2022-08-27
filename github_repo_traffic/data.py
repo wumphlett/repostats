@@ -19,7 +19,8 @@ def get_kpi(path: Path, kpi: str):
 
     if path.exists():
         old_counts = read_csv(path, index_col="date", parse_dates=["date"]).to_dict(orient="index")
-        counts.update(old_counts)
+        old_counts.update(counts)
+        counts = old_counts
 
     if counts:
         start_date, end_date = min(counts.keys()), max(counts.keys())
