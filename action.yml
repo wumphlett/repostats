@@ -28,13 +28,13 @@ runs:
       with:
         python-version: "3.10"
 
-    - run: pip install github-repo-traffic
+    - run: pip install github-repo-traffic>=2.0.0
       shell: bash
-    - run: data
+    - run: repo-data
       shell: bash
       env:
         TRAFFIC_DIR: ${{ inputs.traffic_dir }}
-    - run: readme
+    - run: repo-readme
       shell: bash
       env:
         TRAFFIC_DIR: ${{ inputs.traffic_dir }}
