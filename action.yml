@@ -28,7 +28,7 @@ runs:
       with:
         python-version: "3.10"
 
-    - run: pip install github-repo-traffic>=2.0.0
+    - run: pip install github-repo-traffic
       shell: bash
     - run: repo-data
       shell: bash
