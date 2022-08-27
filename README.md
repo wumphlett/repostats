@@ -74,6 +74,6 @@ daily.
     2.07  ┤│
     2.00  ┤╰
 
-    Chart last updated - Fri Aug 26 23:58:42 2022 UTC
+    Chart last updated - Sat Aug 27 20:12:40 2022 UTC
     
 ```
