@@ -57,10 +57,10 @@ You can use the package responsible for metric collection/aggregation locally in
 
 1. `pip install github-repo-stats`
 2. Set the environment variables in `.env.example`
-   1. TRAFFIC_ACTION_TOKEN - a personal access token with repo permissions
-   2. GITHUB_REPOSITORY - the repo you're trying to collect metrics for (e.g. wumphlett/repostats)
-   3. GITHUB_WORKSPACE - your root directory (can be anything if you're not using readme formatting, else root of a repo)
-   4. TRAFFIC_DIR - the directory to store collected metrics (default `.traffic`)
+   1. `TRAFFIC_ACTION_TOKEN` - a personal access token with repo permissions
+   2. `GITHUB_REPOSITORY` - the repo you're trying to collect metrics for (e.g. wumphlett/repostats)
+   3. `GITHUB_WORKSPACE` - your root directory (can be anything if you're not using readme formatting, else root of a repo)
+   4. `TRAFFIC_DIR` - the directory to store collected metrics (default `.traffic`)
 3. Invoke the commands
    1. `repo-data` - collects and aggregates metric data (make sure to run at least every two weeks for complete data)
    2. `repo-readme` - formats a template readme with a views/clones chart
