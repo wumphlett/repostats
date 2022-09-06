@@ -87,6 +87,6 @@ You can use the package responsible for metric collection/aggregation locally in
    21.47  ┤╰╯│  ╭╮
     0.00  ┤  ╰──╯╰
 
-    Chart last updated - Mon Sep  5 23:58:44 2022 UTC
+    Chart last updated - Tue Sep  6 03:35:47 2022 UTC
     
 ```
