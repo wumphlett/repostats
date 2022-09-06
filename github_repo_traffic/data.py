@@ -5,7 +5,7 @@ from pathlib import Path
 import asciichartpy
 from dotenv import load_dotenv
 from github import Github
-from pandas import DataFrame, read_csv
+from pandas import DataFrame, read_csv, Timestamp
 
 
 NUM_DAYS = 90
@@ -23,7 +23,7 @@ def get_kpi(path: Path, kpi: str):
         counts = old_counts
 
     if counts:
-        start_date, end_date = min(counts.keys()), max(counts.keys())
+        start_date, end_date = min(counts.keys()), max(*counts.keys(), Timestamp.now())
         for i in range((end_date - start_date).days + 1):
             day = start_date + timedelta(days=i)
             if day not in counts:
