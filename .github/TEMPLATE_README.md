@@ -26,7 +26,7 @@ jobs:
       - name: Repository Traffic
         uses: wumphlett/repostats@v2.0.1
         env:
-          TRAFFIC_ACTION_TOKEN: ${{ secrets.TRAFFIC_ACTION_TOKEN }}
+          TRAFFIC_ACTION_TOKEN: ${{{{ secrets.TRAFFIC_ACTION_TOKEN }}}}
 ```
 The `env` directive with the `TRAFFIC_ACTION_TOKEN` is required. Any variables defined in `with` are optional.
 
