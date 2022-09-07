@@ -5,7 +5,7 @@ from dotenv import load_dotenv
 
 
 def main():
-    load_dotenv()
+    load_dotenv(Path.cwd() / ".env")
     workplace_path = Path(os.getenv("GITHUB_WORKSPACE")).resolve() / os.getenv("TRAFFIC_DIR")
     github_path = Path(os.getenv("GITHUB_WORKSPACE")).resolve() / ".github"
 
