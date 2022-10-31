@@ -24,7 +24,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Repository Traffic
-        uses: wumphlett/repostats@v2.0.1
+        uses: wumphlett/repostats@v2.0.2
         env:
           TRAFFIC_ACTION_TOKEN: ${{{{ secrets.TRAFFIC_ACTION_TOKEN }}}}
 ```
