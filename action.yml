@@ -40,6 +40,6 @@ runs:
         TRAFFIC_DIR: ${{ inputs.traffic_dir }}
       if: ${{ inputs.format_readme }}
 
-    - uses: EndBug/add-and-commit@v9.1.0
+    - uses: EndBug/add-and-commit@v9.1.1
       with:
         message: ${{ inputs.commit_msg }}
