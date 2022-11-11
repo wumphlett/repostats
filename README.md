@@ -67,7 +67,7 @@ You can use the package responsible for metric collection/aggregation locally in
 
 ```
 
-    Total Views per Day from 2022-08-25 to 2022-11-10
+    Total Views per Day from 2022-08-25 to 2022-11-11
 
     Repository Views
   322.00  ┼╮
@@ -85,8 +85,8 @@ You can use the package responsible for metric collection/aggregation locally in
    64.40  ┤│           ││
    42.93  ┤│╭╮         ││
    21.47  ┤╰╯│  ╭╮     ││                                                    ╭╮
-    0.00  ┤  ╰──╯╰─────╯╰────────────────────────────────────────────────────╯╰─────────
+    0.00  ┤  ╰──╯╰─────╯╰────────────────────────────────────────────────────╯╰──────────
 
-    Chart last updated - Thu Nov 10 23:58:36 2022 UTC
+    Chart last updated - Fri Nov 11 23:58:43 2022 UTC
     
 ```
