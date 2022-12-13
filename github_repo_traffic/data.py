@@ -44,34 +44,27 @@ def get_clones(path: Path):
     return get_kpi(path, "clones")
 
 
-def get_views_plot(data: DataFrame):
-    views = data["total_views"].to_list()
-    views = views if len(views) < NUM_DAYS else views[-NUM_DAYS:]
+def get_kpi_plot(data: DataFrame, kpi: str):
+    kpis = data[f"total_{kpi}"].to_list()
+    kpis = kpis if len(kpis) < NUM_DAYS else kpis[-NUM_DAYS:]
 
     chart = f"""
-    Total Views per Day from {data.index[-1].date() - timedelta(days=len(views)-1)} to {data.index[-1].date()}
+        Total {kpi.title()} per Day from {data.index[-1].date() - timedelta(days=len(kpis) - 1)} to {data.index[-1].date()}
 
-    Repository Views
-{asciichartpy.plot(views, {"height": 15})}
+        Repository Views
+{asciichartpy.plot(kpis, {"height": 15, "format": "{:8.0f}"})}
 
-    Chart last updated - {datetime.utcnow().strftime("%c")} UTC
-    """
+        Chart last updated - {datetime.utcnow().strftime("%c")} UTC
+        """
     return chart
+
+
+def get_views_plot(data: DataFrame):
+    return get_kpi_plot(data, "views")
 
 
 def get_clones_plot(data: DataFrame):
-    clones = data["total_clones"].to_list()
-    clones = clones if len(clones) < NUM_DAYS else clones[-NUM_DAYS:]
-
-    chart = f"""
-    Total Clones per Day from {data.index[-1].date() - timedelta(days=len(clones)-1)} to {data.index[-1].date()}
-
-    Repository Clones
-{asciichartpy.plot(clones, {"height": 15})}
-
-    Chart last updated - {datetime.utcnow().strftime("%c")} UTC
-    """
-    return chart
+    return get_kpi_plot(data, "clones")
 
 
 def main():
