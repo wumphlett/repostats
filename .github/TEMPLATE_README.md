@@ -45,7 +45,7 @@ traffic_dir (str) - The directory used to store and update traffic data
 Optionally, you can use this action to format your readme with traffic data. This works best if you schedule this action
 daily.
 
-1. Create a TEMPLATE_README.<any type> file in your `.github` directory
+1. Create a `TEMPLATE_README.<any type>` file in your `.github` directory
 2. Include either {{VIEWS_CHART}} or {{CLONES_CHART}} in your template file
    1. Note: its recommended that you wrap your formatting directive in triple backticks to preserve spacing
 3. Enable `format_readme` in your `workflow.yml` file
