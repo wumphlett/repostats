@@ -45,7 +45,7 @@ traffic_dir (str) - The directory used to store and update traffic data
 Optionally, you can use this action to format your readme with traffic data. This works best if you schedule this action
 daily.
 
-1. Create a TEMPLATE_README.<any type> file in your `.github` directory
+1. Create a `TEMPLATE_README.<any type>` file in your `.github` directory
 2. Include either {VIEWS_CHART} or {CLONES_CHART} in your template file
    1. Note: its recommended that you wrap your formatting directive in triple backticks to preserve spacing
 3. Enable `format_readme` in your `workflow.yml` file
@@ -67,26 +67,26 @@ You can use the package responsible for metric collection/aggregation locally in
 
 ```
 
-        Total Views per Day from 2022-12-21 to 2023-03-20
+        Total Views per Day from 2022-12-22 to 2023-03-21
 
         Repository Views
-      10 ┼                                                      ╭╮
-       9 ┤                                                      ││
-       9 ┤                                                      ││
-       8 ┤                                                      ││
-       7 ┤                                                      ││
-       7 ┤                                                      ││
-       6 ┤                                                      ││
-       5 ┤                                                      ││
-       5 ┤                                                      ││
-       4 ┤                                                      ││
-       3 ┤                                                      ││
-       3 ┤                                                      ││
-       2 ┤ ╭╮                                        ╭╮         ││ ╭╮        ╭╮
-       1 ┤ ││             ╭╮              ╭╮ ╭╮ ╭╮   ││         │╰╮││        ││     ╭╮ ╭╮
-       1 ┤ ││             ││              ││ ││ ││   ││         │ │││        ││     ││ ││
-       0 ┼─╯╰─────────────╯╰──────────────╯╰─╯╰─╯╰───╯╰─────────╯ ╰╯╰────────╯╰─────╯╰─╯╰──────────
+      10 ┼                                                     ╭╮
+       9 ┤                                                     ││
+       9 ┤                                                     ││
+       8 ┤                                                     ││
+       7 ┤                                                     ││
+       7 ┤                                                     ││
+       6 ┤                                                     ││
+       5 ┤                                                     ││
+       5 ┤                                                     ││
+       4 ┤                                                     ││
+       3 ┤                                                     ││
+       3 ┤                                                     ││
+       2 ┤╭╮                                        ╭╮         ││ ╭╮        ╭╮
+       1 ┤││             ╭╮              ╭╮ ╭╮ ╭╮   ││         │╰╮││        ││     ╭╮ ╭╮
+       1 ┤││             ││              ││ ││ ││   ││         │ │││        ││     ││ ││
+       0 ┼╯╰─────────────╯╰──────────────╯╰─╯╰─╯╰───╯╰─────────╯ ╰╯╰────────╯╰─────╯╰─╯╰───────────
 
-        Chart last updated - Mon Mar 20 23:58:42 2023 UTC
+        Chart last updated - Tue Mar 21 21:40:54 2023 UTC
         
 ```
