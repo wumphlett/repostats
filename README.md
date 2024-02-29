@@ -67,11 +67,11 @@ You can use the package responsible for metric collection/aggregation locally in
 
 ```
 
-        Total Views per Day from 2023-12-01 to 2024-02-28
+        Total Views per Day from 2023-12-02 to 2024-02-29
 
         Repository Views
        0 ┼─────────────────────────────────────────────────────────────────────────────────────────
 
-        Chart last updated - Wed Feb 28 23:58:42 2024 UTC
+        Chart last updated - Thu Feb 29 23:58:50 2024 UTC
         
 ```
