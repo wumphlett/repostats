@@ -67,11 +67,26 @@ You can use the package responsible for metric collection/aggregation locally in
 
 ```
 
-        Total Views per Day from 2023-12-03 to 2024-03-01
+        Total Views per Day from 2023-12-04 to 2024-03-02
 
         Repository Views
-       0 ┼─────────────────────────────────────────────────────────────────────────────────────────
+       1 ┼                                                                                        ╭
+       1 ┤                                                                                        │
+       1 ┤                                                                                        │
+       1 ┤                                                                                        │
+       1 ┤                                                                                        │
+       1 ┤                                                                                        │
+       1 ┤                                                                                        │
+       1 ┤                                                                                        │
+       0 ┤                                                                                        │
+       0 ┤                                                                                        │
+       0 ┤                                                                                        │
+       0 ┤                                                                                        │
+       0 ┤                                                                                        │
+       0 ┤                                                                                        │
+       0 ┤                                                                                        │
+       0 ┼────────────────────────────────────────────────────────────────────────────────────────╯
 
-        Chart last updated - Fri Mar  1 23:58:47 2024 UTC
+        Chart last updated - Sat Mar  2 23:58:35 2024 UTC
         
 ```
